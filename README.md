@@ -1,5 +1,8 @@
 # React Data List with Pagination
 
+## Live link
+Demo: https://sharon-zhao.github.io/Kyulux/#/
+
 ## Objectives
 
 List data from Drugs@FDA
