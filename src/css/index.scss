@@ -1,0 +1,62 @@
+@import '~bootSTrap/scss/bootSTrap';
+$STFont: 'Source Sans Pro', sans-serif;;
+$STBlue: blue;
+$STRed: #FF585D;
+$STWhite: #FFF;
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#table {
+  margin-left: 15%;
+  margin-right: 15%
+}
+#pre:hover {
+  background-color: #A9A9A9;
+}
+#nex:hover {
+  background-color: #A9A9A9;
+}
+.searchContainer {
+  background-color: #FFF;
+  border: 0.5px solid black;
+  border-radius: 25px;
+  padding-left: 10px;
+  width: 40vw;
+  margin-bottom: 10px;
+}
+
+.searchBar {
+  font-family: $STFont;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  border-radius: 10%;
+  width: 100%;
+  height: 5vh;
+  z-index: 1;
+  & input {
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  & .searchButton {
+    text-align: center;
+    background-color: #A9A9A9;
+    border-radius: 10%;
+    margin-right: 5%;
+    width: 10%;
+    cursor: pointer;
+    &:hover {
+      background-color: blue;
+    }
+    & button {
+      background: transparent;
+      border: none;
+      width: 100%;
+    }
+  }
+}
