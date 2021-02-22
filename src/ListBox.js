@@ -43,37 +43,41 @@ class ListBox extends Component {
   }
 
   render () {
-    return (
-      <div className="main">
-        <div className="top_bar">
-        </div>
-        <div className="lists">
-          <ul className="index">
-            <div id = 'table'>
-              <Table striped bordered hover >
-                <thead>
-                  <tr>
-                    <th>Id</th>
-                    <th>Age</th>
-                    <th>Sex</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {this.state.indexList.map(infor => (
-                    <tr key = {infor.safetyreportid}>
-                      <td >{infor.safetyreportid}</td>
-                      <td>{infor.patient.patientonsetage}</td>
-                      <td>{infor.patient.patientsex}</td>
+    if (!this.state.totalData) {
+      return <h5 style= {{ padding: '5px', color: 'blue' }}>Loading... Please waiting...</h5>
+    } else {
+      return (
+        <div className="main">
+          <div className="top_bar">
+          </div>
+          <div className="lists">
+            <ul className="index">
+              <div id = 'table'>
+                <Table striped bordered hover >
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Age</th>
+                      <th>Sex</th>
                     </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </ul>
-          <PageButton { ...this.state } pageNext={this.pageNext} />
+                  </thead>
+                  <tbody>
+                    {this.state.indexList.map(infor => (
+                      <tr key = {infor.safetyreportid}>
+                        <td >{infor.safetyreportid}</td>
+                        <td>{infor.patient.patientonsetage}</td>
+                        <td>{infor.patient.patientsex}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div>
+            </ul>
+            <PageButton { ...this.state } pageNext={this.pageNext} />
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
   }
 }
 export default ListBox
